@@ -1,1 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Muhammad Ali — Manual SQA Engineer in Karachi, Pakistan. Manual testing, test cases, bug reporting and regression testing portfolio.">
+    <title>Muhammad Ali | Manual SQA Engineer</title>
+    <style>
+        :root {
+            --navy: #102b50;
+            --blue: #1769e0;
+            --pale: #eef5ff;
+            --ink: #172b46;
+            --muted: #60718a;
+            --line: #dce6f3;
+            --white: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Segoe UI, Arial, sans-serif;
+            color: var(--ink);
+            background: #f7faff;
+            line-height: 1.65
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 0 24px
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 5
+        }
+
+        nav {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .brand {
+            font-weight: 800;
+            color: var(--navy)
+        }
+
+        .brand span {
+            color: var(--blue)
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #53657e
+        }
+
+        .hero {
+            background: linear-gradient(125deg, #102b50, #174b84);
+            color: white;
+            padding: 76px 0 64px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            align-items: center;
+            gap: 40px
+        }
+
+        .eyebrow {
+            display: inline-block;
+            border: 1px solid #76b7ff;
+            border-radius: 999px;
+            padding: 5px 12px;
+            color: #cfe6ff;
+            font-size: 13px;
+            font-weight: 700
+        }
+
+        h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.1;
+            margin: 18px 0
+        }
+
+        h1 span {
+            color: #8fc8ff
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #dce9f8
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 17px;
+            border-radius: 9px;
+            font-weight: 700;
+            font-size: 14px;
+            background: white;
+            color: var(--navy)
+        }
+
+        .btn.primary {
+            background: #65aaff;
+            color: #09264a
+        }
+
+        .btn.outline {
+            border: 1px solid #a8c9ef;
+            background: transparent;
+            color: white
+        }
+
+        .hero-card {
+            border: 1px solid #5a82ad;
+            background: #ffffff12;
+            border-radius: 20px;
+            padding: 26px;
+            text-align: center
+        }
+
+        .avatar {
+            width: 116px;
+            height: 116px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            border: 3px solid #a8d5ff;
+            display: grid;
+            place-items: center;
+            background: #dcecff;
+            color: #174b84;
+            font-size: 38px;
+            font-weight: 800;
+            overflow: hidden
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .hero-card strong {
+            display: block;
+            font-size: 19px
+        }
+
+        .hero-card small {
+            color: #d7e7f8
+        }
+
+        section {
+            padding: 62px 0
+        }
+
+        .section-head {
+            margin-bottom: 25px
+        }
+
+        .section-head h2 {
+            font-size: 30px;
+            color: var(--navy);
+            margin: 0
+        }
+
+        .section-head p {
+            color: var(--muted);
+            margin: 5px 0
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            padding: 22px;
+            box-shadow: 0 6px 22px #183b6508
+        }
+
+        .card h3 {
+            margin: 8px 0;
+            color: var(--navy)
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--muted)
+        }
+
+        .icon {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            background: var(--pale);
+            border-radius: 12px;
+            font-size: 21px
+        }
+
+        .tags {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+            margin: 14px 0
+        }
+
+        .tag {
+            font-size: 11px;
+            padding: 4px 8px;
+            background: #edf4ff;
+            color: #245a9f;
+            border-radius: 999px;
+            font-weight: 700
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .skill-list span {
+            background: white;
+            border: 1px solid var(--line);
+            padding: 9px 12px;
+            border-radius: 9px;
+            font-size: 14px
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 13px
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+            font-size: 13px
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 13px 14px;
+            border-bottom: 1px solid var(--line);
+            vertical-align: top
+        }
+
+        th {
+            background: #edf4ff;
+            color: var(--navy)
+        }
+
+        tr:last-child td {
+            border-bottom: 0
+        }
+
+        .bug {
+            border-left: 4px solid #e4a13b
+        }
+
+        .severity {
+            display: inline-block;
+            background: #fff0dc;
+            color: #9b5200;
+            border-radius: 5px;
+            padding: 3px 8px;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .contact {
+            background: #102b50;
+            color: white
+        }
+
+        .contact h2 {
+            color: white
+        }
+
+        .contact p {
+            color: #335885
+        }
+
+        .contact .card {
+            color: var(--ink)
+        }
+
+        footer {
+            background: #0a1e37;
+            color: #b7c9df;
+            padding: 22px 0;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .note {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 12px
+        }
+
+        @media(max-width:760px) {
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero-card {
+                max-width: 360px
+            }
+
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            .navlinks {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                font-size: 12px
+            }
+
+            .wrap {
+                padding: 0 17px
+            }
+
+            .hero {
+                padding: 55px 0
+            }
+
+            .navlinks a:nth-child(4) {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="wrap"><a class="brand" href="#home">Muhammad Ali <span>| QA</span></a>
+            <div class="navlinks"><a href="#about">About</a><a href="#projects">Projects</a><a
+                    href="#skills">Skills</a><a href="#testcases">Test Cases</a><a href="#contact">Contact</a></div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="wrap hero-grid">
+                <div><span class="eyebrow">MANUAL SQA ENGINEER · KARACHI, PAKISTAN</span>
+                    <h1>Hi, I'm <span>Muhammad Ali</span></h1>
+                    <h2 style="font-size:20px;margin:0">Manual SQA Engineer | Quality Advocate</h2>
+                    <p>I focus on software quality through structured manual testing, clear bug reports, practical test
+                        cases, and user-focused validation. I’m interested in contributing to reliable, user-friendly
+                        web applications.</p>
+                    <div class="buttons"><a class="btn primary" href="#projects">View My Projects</a><a
+                            class="btn outline" href="mailto:alijawed0110@gmail.com">Email Me</a></div>
+                </div>
+                <div class="hero-card">
+                    <div class="avatar" id="avatar">
+<img src="./ali.jpg">
+
+                    </div><strong>Test carefully. Ship
+                        confidently.</strong><small>Functional testing · Bug reporting · Regression testing</small>
+                    <p style="font-size:12px;color:#d7e7f8">Photo can be added later by replacing the initials with your
+                        image.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>About Me</h2>
+                    <p>A quick introduction for recruiters and hiring managers.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="card">
+                        <h3>My QA approach</h3>
+                        <p>I’m Muhammad Ali, a Manual SQA Engineer based in Karachi, Pakistan, with 1–2 years of
+                            experience. I focus on understanding requirements, identifying edge cases, validating
+                            expected behaviour, and documenting defects so they can be reproduced and investigated
+                            efficiently.</p>
+                        <p><strong>Location:</strong> Karachi, Pakistan<br><strong>Experience:</strong> 1–2 years (as
+                            provided)<br><strong>Focus:</strong> Manual web application testing</p>
+                    </div>
+                    <div class="card">
+                        <h3>What I bring</h3>
+                        <p>✓ Test scenario and test case design<br>✓ Positive and negative testing<br>✓ Functional and
+                            regression testing<br>✓ Reproducible bug reports<br>✓ HTML, CSS and SCSS familiarity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" style="background:#eef4fc">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Testing Projects</h2>
+                    <p>Demo case studies showing how I approach common web application testing.</p>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <div class="icon">🛒</div>
+                        <h3>E-commerce Website (Demo)</h3>
+                        <p>Test product search, product details, cart updates, checkout validations, and common user
+                            journeys.</p>
+                        <div class="tags"><span class="tag">Functional</span><span class="tag">Regression</span><span
+                                class="tag">UI</span></div><a href="#testcases"
+                            style="color:#1769e0;font-weight:700;font-size:14px">View sample test cases →</a>
+                    </article>
+                    <article class="card">
+                        <div class="icon">🔐</div>
+                        <h3>Login Module (Demo)</h3>
+                        <p>Validate login with correct and incorrect credentials, empty fields, password masking, and
+                            error messages.</p>
+                        <div class="tags"><span class="tag">Negative testing</span><span class="tag">Validation</span>
+                        </div><a href="#bugreport" style="color:#1769e0;font-weight:700;font-size:14px">View sample bug
+                            report →</a>
+                    </article>
+                    <article class="card">
+                        <div class="icon">📝</div>
+                        <h3>Registration Form (Demo)</h3>
+                        <p>Check required fields, email format, password rules, duplicate email handling, and
+                            confirmation messages.</p>
+                        <div class="tags"><span class="tag">Form validation</span><span class="tag">Usability</span>
+                        </div>
+                        <p class="note">Demo concept. Add actual execution evidence before describing it as completed
+                            work.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Skills & Tools</h2>
+                    <p>Skills provided for this portfolio. Add tools only if you have used them.</p>
+                </div>
+                <div class="skill-list"><span>Manual Testing</span><span>Test Cases</span><span>Bug
+                        Reporting</span><span>Functional Testing</span><span>Regression
+                        Testing</span><span>HTML</span><span>CSS</span><span>SCSS</span></div>
+                <p class="note">Jira, API testing, SQL, Agile, or automation are not listed as skills unless you confirm
+                    your experience with them.</p>
+            </div>
+        </section>
+        <section id="testcases" style="background:#eef4fc">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Sample Test Cases</h2>
+                    <p>Example login module cases. Execution status is intentionally left as “Not executed”.</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Test Case ID</th>
+                                <th>Scenario</th>
+                                <th>Steps / Test Data</th>
+                                <th>Expected Result</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TC-LOGIN-01</td>
+                                <td>Login with valid credentials</td>
+                                <td>Enter registered email and correct password; click Login.</td>
+                                <td>User logs in and reaches the dashboard.</td>
+                                <td>Not executed</td>
+                            </tr>
+                            <tr>
+                                <td>TC-LOGIN-02</td>
+                                <td>Incorrect password</td>
+                                <td>Enter registered email and an incorrect password.</td>
+                                <td>Login is rejected and a suitable error is shown.</td>
+                                <td>Not executed</td>
+                            </tr>
+                            <tr>
+                                <td>TC-LOGIN-03</td>
+                                <td>Empty fields</td>
+                                <td>Leave email and password empty; click Login.</td>
+                                <td>Required-field validation appears.</td>
+                                <td>Not executed</td>
+                            </tr>
+                            <tr>
+                                <td>TC-LOGIN-04</td>
+                                <td>Invalid email format</td>
+                                <td>Enter “abc” as email and a sample password.</td>
+                                <td>Email validation appears; login is not completed.</td>
+                                <td>Not executed</td>
+                            </tr>
+                            <tr>
+                                <td>TC-LOGIN-05</td>
+                                <td>Password masking</td>
+                                <td>Type a password into the password field.</td>
+                                <td>Password is masked by default.</td>
+                                <td>Not executed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="bugreport">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Sample Bug Report</h2>
+                    <p>Hypothetical example to demonstrate bug-report structure; not a verified defect.</p>
+                </div>
+                <div class="card bug">
+                    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+                        <h3 style="margin-top:0">BUG-001 — Login accepts an incorrect password</h3><span
+                            class="severity">Example severity: High</span>
+                    </div>
+                    <p><strong>Environment:</strong> Chrome / Windows 11 (example)</p>
+                    <p><strong>Precondition:</strong> A test account exists.</p>
+                    <p><strong>Steps:</strong><br>1. Open the login page.<br>2. Enter a registered email.<br>3. Enter an
+                        incorrect password.<br>4. Click Login.</p>
+                    <p><strong>Expected:</strong> Login is rejected and an error message appears.</p>
+                    <p><strong>Actual:</strong> In this hypothetical example, the dashboard opens.</p>
+                    <p class="note">Only publish a real bug after reproducing it on an application you are authorized to
+                        test. Set severity and priority based on actual impact.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>My QA Workflow</h2>
+                    <p>A structured approach from requirements to reporting.</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="icon">1</div>
+                        <h3>Understand</h3>
+                        <p>Review requirements, acceptance criteria, and test scope.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">2</div>
+                        <h3>Design & Execute</h3>
+                        <p>Write test cases, prepare test data, and record actual results.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">3</div>
+                        <h3>Report & Retest</h3>
+                        <p>Log reproducible defects, retest fixes, and summarize results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Let's Connect</h2>
+                    <p>Open to Manual SQA opportunities in Pakistan.</p>
+                </div>
+                <div class="card">
+                    <h3>Muhammad Ali</h3>
+                    <p><strong>Email:</strong> <a
+                            href="mailto:alijawed0110@gmail.com">alijawed0110@gmail.com</a><br><strong>Location:</strong>
+                        Karachi, Pakistan</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ali-jawed-565969407/"
+                            target="_blank"
+                            rel="noreferrer">linkedin.com/in/ali-jawed-565969407</a><br><strong>GitHub:</strong> <a
+                            href="https://github.com/alijawed0110-coder" target="_blank"
+                            rel="noreferrer">github.com/alijawed0110-coder</a></p>
+                    <div class="buttons"><a class="btn primary" href="mailto:alijawed0110@gmail.com">Email Me</a><a
+                            class="btn" href="https://www.linkedin.com/in/ali-jawed-565969407/" target="_blank"
+                            rel="noreferrer">LinkedIn Profile</a><a class="btn"
+                            href="https://github.com/alijawed0110-coder" target="_blank" rel="noreferrer">GitHub
+                            Profile</a></div>
+                    <p class="note">Resume download link can be added when you provide a public CV link or PDF.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>© <span id="year"></span> Muhammad Ali · Manual SQA Engineer · Karachi, Pakistan</footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
